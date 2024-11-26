@@ -1,0 +1,18 @@
+<h2>Quiz Results for Student ID: {{ student_id }}</h2>
+
+{% if results %}
+<table>
+    <tr>
+        <th>Quiz ID</th>
+        <th>Score</th>
+    </tr>
+    {% for result in results %}
+    <tr>
+        <td>{{ result.quiz_id }}</td>
+        <td>{{ result.score }}</td>
+    </tr>
+    {% endfor %}
+</table>
+{% else %}
+<p>No results available</p>
+{% endif %}
